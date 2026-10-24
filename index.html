@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 8 Physics - Chapter 4: Metals and Non-Metals (Complete Portal & Exercises)</title>
+    <style>
+        :root {
+            --primary: #d97706;
+            --primary-dark: #b45309;
+            --secondary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #1e293b;
+            --border: #cbd5e1;
+            --accent: #059669;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Full Screen Login Overlay */
+        #visitor-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .login-card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 16px;
+            width: 90%;
+            max-width: 450px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .school-title {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .login-card h2 {
+            color: var(--text-color);
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        .login-card p {
+            color: #64748b;
+            margin-bottom: 25px;
+            font-size: 0.95rem;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #334155;
+            font-size: 0.9rem;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus {
+            border-color: var(--primary);
+        }
+
+        .btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Main Content Container (Hidden until login) */
+        #main-content {
+            display: none;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            padding-bottom: 80px;
+        }
+
+        /* Top Nav */
+        .top-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #ffffff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 12px;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .top-nav a {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 6px;
+            background: #fef3c7;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .top-nav a:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Session Header Bar */
+        .session-bar {
+            background: #fef3c7;
+            border: 1px solid var(--primary);
+            padding: 12px 20px;
+            border-radius: 10px;
+            margin-top: 70px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        /* Section Cards */
+        .card {
+            background: var(--card-bg);
+            border-radius: 14px;
+            padding: 35px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border-top: 5px solid var(--primary);
+        }
+
+        h1 {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        h2 {
+            color: #1e293b;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        p, li {
+            margin-bottom: 12px;
+            color: #475569;
+            text-align: justify;
+        }
+
+        ul {
+            padding-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        /* Telugu Long Descriptions */
+        .telugu-desc {
+            background: #fef9c3;
+            border-left: 4px solid var(--primary);
+            padding: 15px;
+            margin: 12px 0 20px 0;
+            border-radius: 0 8px 8px 0;
+            color: #713f12;
+            font-size: 1rem;
+        }
+
+        .telugu-desc strong {
+            color: #854d0e;
+        }
+
+        /* Pronunciation styling under left side term */
+        .term-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .eng-term {
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .pronunciation-telugu {
+            font-size: 0.85rem;
+            color: var(--primary-dark);
+            margin-top: 3px;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.95rem;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            border: 1px solid #e2e8f0;
+            padding: 14px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        /* Q&A Boxes */
+        .qa-box {
+            background: #fffbeb;
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .qa-box p.question {
+            font-weight: bold;
+            color: var(--primary-dark);
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+        }
+
+        /* Scroll to Top */
+        #scrollTopBtn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 14px 18px;
+            border-radius: 50%;
+            font-size: 1.3rem;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            display: none;
+            z-index: 999;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        #scrollTop_Btn:hover {
+            background: var(--primary-dark);
+            transform: scale(1.1);
+        }
+
+        @media(max-width: 768px) {
+            .card {
+                padding: 20px;
+            }
+            .login-card {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Visitor Login Overlay (Mandatory First Step) -->
+    <div id="visitor-overlay">
+        <div class="login-card">
+            <div class="school-title">JACOB GAPP SCHOOL</div>
+            <h2>Student Portal Login</h2>
+            <p>Please enter your student name and roll number to unlock Chapter 4 portal.</p>
+            <div class="form-group">
+                <label for="visitorName">Student Name:</label>
+                <input type="text" id="visitorName" placeholder="Balaswamy">
+            </div>
+            <div class="form-group">
+                <label for="visitorRoll">Roll Number / ID:</label>
+                <input type="text" id="visitorRoll" placeholder="e.g., 8054">
+            </div>
+            <button class="btn" onclick="submitVisitorLogin()">Enter Portal & Start Timer</button>
+        </div>
+    </div>
+
+    <!-- Top Navigation Menu -->
+    <nav class="top-nav">
+        <a href="#ch4-main">Ch 4 Overview</a>
+        <a href="#ch4-glossary">Ch 4 Glossary (160+)</a>
+        <a href="#ch4-exercises">Exercises & Q&A</a>
+        <a href="#ch4-experiments">Suggested Experiments</a>
+        <a href="#ch4-projects">Suggested Projects</a>
+    </nav>
+
+    <!-- Main Portal Content -->
+    <div id="main-content">
+
+        <!-- Active Session Info Bar -->
+        <div class="session-bar">
+            <span>School: <strong>JACOB GAPP SCHOOL</strong> | Student: <strong id="showName"></strong> (Roll: <strong id="showRoll"></strong>)</span>
+            <span>Session Time: <strong id="timerCounter">0</strong> seconds</span>
+        </div>
+
+        <!-- ================= CHAPTER 4: METALS AND NON-METALS ================= -->
+        <div id="ch4-main" class="card">
+            <h1>Chapter 4: Metals and Non-Metals (లోహాలు మరియు అలోహాలు)</h1>
+            
+            <h2>1. Introduction to Metals and Non-Metals</h2>
+            <p>We use many materials in daily life such as aluminum, copper, gold, and iron, which are normally solid at room temperature (except mercury, which is a liquid metal). Materials are grouped into metals and non-metals based on their physical and chemical properties.</p>
+            <div class="telugu-desc">
+                <strong>తెలుగు వివరణ:</strong> మన దైనందిన జీవితంలో ఇనుము, రాగి, బంగారం, అల్యూమినియం వంటి లోహాలను వాడతాం. సాధారణ ఉష్ణోగ్రత వద్ద పాదరసం మినహా మిగిలిన లోహాలన్నీ ఘన స్థితిలో ఉంటాయి. పదార్థాలను వాటి భౌతిక మరియు రసాయన ధర్మాల ఆధారంగా లోహాలు మరియు అలోహాలుగా వర్గీకరిస్తారు.
+            </div>
+
+            <h2>2. Physical Properties of Metals</h2>
+            <ul>
+                <li><strong>Lustre:</strong> Metals have a bright shining surface and reflect light.</li>
+                <li><strong>Sonority:</strong> Metals produce a ringing sound when struck on a hard surface.</li>
+                <li><strong>Malleability:</strong> Metals can be beaten into very thin sheets (e.g., gold or silver foils).</li>
+                <li><strong>Ductility:</strong> Metals can be drawn into fine wires (e.g., copper wires).</li>
+                <li><strong>Conduction:</strong> Metals are generally good conductors of heat and electricity.</li>
+            </ul>
+            <div class="telugu-desc">
+                <strong>తెలుగు వివరణ:</strong> లోహాల భౌతిక ధర్మాలు: 1. మెరుపు (Lustre): లోహాలు ప్రకాశవంతంగా మెరుస్తాయి. 2. శబ్ద గుణం (Sonority): గట్టి వస్తువుతో కొడితే శబ్దం వస్తుంది. 3. సాగే గుణం / పలచని రేకులుగా మారుట (Malleability): సులభంగా రేకులుగా సాగదీయవచ్చు. 4. తీగలుగా మారుట (Ductility): సన్నని తీగలుగా మార్చవచ్చు. 5. ఉష్ణ, విద్యుత్ వాహకత: ఇవి ఉష్ణాన్ని మరియు విద్యుత్‌ను ప్రసరింపజేస్తాయి.
+            </div>
+
+            <h2>3. Chemical Properties of Metals and Non-Metals</h2>
+            <p>Metals react with oxygen to form basic oxides (which turn red litmus blue), whereas non-metals react with oxygen to form acidic oxides (which turn blue litmus red). Metals also react with water and dilute acids to liberate hydrogen gas.</p>
+            <div class="telugu-desc">
+                <strong>తెలుగు వివరణ:</strong> లోహాలు ఆక్సిజన్‌తో చర్య జరిపి క్షార ఆక్సైడ్లను ఇస్తాయి (ఎరుపు లిట్మస్‌ను నీలి రంగులోకి మారుస్తాయి). అలోహాలు ఆమ్ల ఆక్సైడ్లను ఇస్తాయి. అలాగే లోహాలు ఆమ్లాలతో చర్య జరిపి హైడ్రోజన్ వాయువును వెలువరిస్తాయి.
+            </div>
+
+            <h2>4. Displacement Reactions and Reactivity Series</h2>
+            <p>More reactive metals can displace less reactive metals from their salt solutions. For example, zinc can displace copper from copper sulphate solution. The reactivity order studied is: Zinc > Iron > Copper.</p>
+            <div class="telugu-desc">
+                <strong>తెలుగు వివరణ:</strong> ఎక్కువ చర్యాశీలత గల లోహం, తక్కువ చర్యాశీలత గల లోహాన్ని దాని లవణ ద్రావణం నుండి స్థానభ్రంశం చేస్తుంది. ఉదాహరణకు జింక్ రాగిని తొలగిస్తుంది. చర్యాశీలత క్రమం: జింక్ > ఇనుము > రాగి.
+            </div>
+
+            <h2>5. Uses of Metals and Non-Metals</h2>
+            <p>Metals are used in machinery, automobiles, electrical appliances, coins, and utensils due to their malleability and high conductivity. Non-metals like sulphur are used in crackers and antiseptics, carbon in water purification, and iodine for medical purposes.</p>
+            <div class="telugu-desc">
+                <strong>తెలుగు వివరణ:</strong> యంత్రాలు, ఆటోమొబైల్స్, నాణేలు, వంట పాత్రల తయారీలో లోహాలు వాడతారు. అలోహాలైన సల్ఫర్‌ను మందుగుండు సామగ్రిలో, కార్బన్‌ను నీటి శుద్ధిలో, అయోడిన్‌ను వైద్యంలో వాడతారు.
+            </div>
+
+            <h2>6. Additional Core Concepts (Overview Points 6 to 25)</h2>
+            <ul>
+                <li><strong>Point 6 - Mercury Exception:</strong> Unlike other solid metals at room temperature, mercury is a heavy liquid metal used in thermometers. (తెలుగు: సాధారణ ఉష్ణోగ్రత వద్ద ద్రవ రూపంలో ఉండే ఒక్కగానొక్క లోహం పాదరసం.)</li>
+                <li><strong>Point 7 - Steel Classification:</strong> Steel is an alloy of iron and carbon, exhibiting high strength and metallic behavior. (తెలుగు: ఉక్కు అనేది ఇనుము మరియు కార్బన్‌ల మిశ్రమ లోహం.)</li>
+                <li><strong>Point 8 - Sandpaper Cleaning:</strong> Tarnished metal surfaces are cleaned with sandpaper to expose their true lustrous metallic shine. (తెలుగు: మసకబారిన లోహపు ఉపరితలాన్ని ఇసుక కాగితంతో రుద్దితే మెరుపు వస్తుంది.)</li>
+                <li><strong>Point 9 - Sonorous School Bells:</strong> Because metals produce ringing sounds (sonority), they are used to make school bells and musical instruments. (తెలుగు: లోహాలకు శబ్ద గుణం ఉండటం వల్ల స్కూలు గంటలు చేయడానికి వాడతారు.)</li>
+                <li><strong>Point 10 - Early Human Tools:</strong> Early humans used stone and wood before discovering copper and iron, which were stronger and could be moulded when heated. (తెలుగు: ప్రాచీన మానవులు మొదట రాళ్లు, చెక్కలను వాడి, ఆ తర్వాత రాగి, ఇనుమును కనుగొన్నారు.)</li>
+                <li><strong>Point 11 - Gold and Silver Foils:</strong> High malleability allows gold and silver to be beaten into extremely thin decorative sweet foils. (తెలుగు: బంగారం మరియు వెండి అత్యధిక రేఖా గుణాన్ని కలిగి ఉంటాయి కాబట్టి పలుచని రేకులుగా చేయవచ్చు.)</li>
+                <li><strong>Point 12 - Copper Electrical Wires:</strong> High ductility and electrical conductivity make copper the premier choice for electrical wiring and circuits. (తెలుగు: రాగికి తీగలుగా మారు గుణం మరియు విద్యుత్ వాహకత ఎక్కువ కాబట్టి వైర్లకు వాడతారు.)</li>
+                <li><strong>Point 13 - Insulating Tool Handles:</strong> Handles of screwdrivers and cooking pans are made of wood or plastic (bad conductors) to prevent electric shocks and burns. (తెలుగు: కరెంట్ షాట్లు తగలకుండా మరియు చేతులు కాలకుండా టూల్స్ హ్యాండిల్స్‌కు ప్లాస్టిక్ వాడతారు.)</li>
+                <li><strong>Point 14 - Heat Conduction in Pans:</strong> Cooking vessels are made of metals like aluminium and copper due to their high thermal conductivity. (తెలుగు: వంట పాత్రలకు ఉష్ణ వాహకత ఎక్కువ ఉండే లోహాలను వాడతారు.)</li>
+                <li><strong>Point 15 - Magnesium Ribbon Combustion:</strong> Burning magnesium ribbon in air produces a dazzling white light and forms basic magnesium oxide ash. (తెలుగు: మెగ్నీషియం రిబ్బన్‌ను మండిస్తే తెల్లని కాంతి వస్తుంది మరియు క్షార ఆక్సైడ్ బూడిద ఏర్పడుతుంది.)</li>
+                <li><strong>Point 16 - Sulphur Dioxide Acidity:</strong> Burning sulphur produces sulphur dioxide gas which dissolves in water to form sulphurous acid, turning blue litmus red. (తెలుగు: సల్ఫర్ మంట ద్వారా వచ్చే పొగ నీటిలో కరిగి నీలి లిట్మస్‌ను ఎరుపుగా మారుస్తుంది.)</li>
+                <li><strong>Point 17 - Gold Corrosion Resistance:</strong> Unlike iron or copper, noble metals like gold and platinum do not react with air or moisture, so they never rust. (తెలుగు: బంగారం మరియు ప్లాటినం గాలితో చర్య జరపవు కాబట్టి ఎప్పటికీ తుప్పు పట్టవు.)</li>
+                <li><strong>Point 18 - Sodium Reactivity:</strong> Sodium is an extremely reactive metal stored in kerosene because it reacts violently and catches fire with water. (తెలుగు: సోడియం అత్యంత చర్యాశీలత గల లోహం కాబట్టి దానిని కిరోసిన్‌లో భద్రపరుస్తారు.)</li>
+                <li><strong>Point 19 - Hydrogen Gas Evolution:</strong> Metals reacting with dilute hydrochloric or sulphuric acid release hydrogen gas, producing a characteristic 'pop' sound with a burning matchstick. (తెలుగు: లోహాలు ఆమ్లాలతో చర్య జరిపి హైడ్రోజన్ వాయువును విడుదల చేస్తాయి.)</li>
+                <li><strong>Point 20 - Metal Displacements:</strong> A reactive metal replaces a less reactive metal from its aqueous salt solution in a single displacement reaction. (తెలుగు: చర్యాశీల లోహం తక్కువ చర్యాశీల లోహాన్ని దాని ద్రావణం నుండి తొలగిస్తుంది.)</li>
+                <li><strong>Point 21 - Human Body Elemental Composition:</strong> 99% of the human body mass consists of non-metal and light elements like oxygen, carbon, hydrogen, and nitrogen. (తెలుగు: మానవ శరీర ద్రవ్యరాశిలో ఎక్కువ భాగం ఆక్సిజన్, కార్బన్ వంటి అలోహ మూలకాలే ఉంటాయి.)</li>
+                <li><strong>Point 22 - Fireworks and Gunpowder:</strong> Non-metal sulphur is a key ingredient in manufacturing crackers, fireworks, and gunpowder. (తెలుగు: పటాకులు మరియు గన్‌పౌడర్ తయారీలో సల్ఫర్ అలోహం ఉపయోగపడుతుంది.)</li>
+                <li><strong>Point 23 - Water Purification Carbon:</strong> Activated carbon acts as a powerful decolorizing and purifying agent in modern water filtration systems. (తెలుగు: నీటి శుద్ధి వ్యవస్థలలో యాక్టివేటెడ్ కార్బన్ శుద్ధి కారకంగా పనిచేస్తుంది.)</li>
+                <li><strong>Point 24 - Medical Tincture Iodine:</strong> Alcoholic iodine solution (tincture of iodine) is used as an antiseptic for treating wounds and cuts. (తెలుగు: గాయాలకు ఆంటిసెప్టిక్‌గా టించర్ అయోడిన్ వాడతారు.)</li>
+                <li><strong>Point 25 - Periodic Table Classification:</strong> The periodic table organizes elements systematically into metals, non-metals, and metalloids based on recurring properties. (తెలుగు: ఆవర్తన పట్టిక మూలకాలను లోహాలు మరియు అలోహాలుగా క్రమబద్ధీకరించింది.)</li>
+            </ul>
+        </div>
+
+        <!-- ================= CHAPTER 4 GLOSSARY (160+ TERMS) ================= -->
+        <div id="ch4-glossary" class="card">
+            <h1>Chapter 4: Comprehensive Glossary & Vocabulary (160+ Terms)</h1>
+            <p>Explore all key technical terms from Chapter 4 with English terms, Telugu pronunciation underneath, and bilingual definitions/examples.</p>
+            <table>
+                <tr>
+                    <th>Term (English)</th>
+                    <th>Definition & Bilingual Example</th>
+                </tr>
+                <tr><td><div class="term-container"><span class="eng-term">1. Metal</span><span class="pronunciation-telugu">మెటల్ (లోహం)</span></div></td><td>Hard, lustrous, conducting element. Example: Iron and copper / ఉదా: ఇనుము మరియు రాగి.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">2. Non-Metal</span><span class="pronunciation-telugu">నాన్-మెటల్ (అలోహం)</span></div></td><td>Brittle, non-conducting element. Example: Sulphur and carbon / ఉదా: సల్ఫర్ మరియు కార్బన్.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">3. Lustre</span><span class="pronunciation-telugu">లస్టర్ (మెరుపు గుణం)</span></div></td><td>Surface brightness reflecting light. Example: Polished gold / ఉదా: మెరిసే బంగారం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">4. Sonority</span><span class="pronunciation-telugu">సోనారిటీ (శబ్ద గుణం)</span></div></td><td>Producing ringing sound when struck. Example: School bell / ఉదా: స్కూలు గంట.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">5. Malleability</span><span class="pronunciation-telugu">మాలియబిలిటీ (రేకలుగా మారు గుణం)</span></div></td><td>Beating into thin sheets. Example: Aluminium foil / ఉదా: అల్యూమినియం రేకు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">6. Ductility</span><span class="pronunciation-telugu">డక్టిలిటీ (తీగలుగా మారు గుణం)</span></div></td><td>Drawing into fine wires. Example: Copper wire / ఉదా: రాగి తీగ.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">7. Conductor of Heat</span><span class="pronunciation-telugu">కండక్టర్ ఆఫ్ హీట్ (ఉష్ణ వాహకం)</span></div></td><td>Material transferring heat. Example: Cooking pan base / ఉదా: వంట పాత్ర అడుగు భాగం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">8. Conductor of Electricity</span><span class="pronunciation-telugu">కండక్టర్ ఆఫ్ ఎలక్ట్రిసిటీ (విద్యుత్ వాహకం)</span></div></td><td>Material allowing current flow. Example: Iron nail circuit / ఉదా: ఇనుప ములు కరెంట్ ప్రసారం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">9. Displacement Reaction</span><span class="pronunciation-telugu">డిస్‌ప్లేస్‌మెంట్ రియాక్షన్ (స్థానభ్రంశ చర్య)</span></div></td><td>More reactive metal displaces another. Example: Zinc displacing copper / ఉదా: జింక్ రాగిని తొలగించుట.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">10. Reactivity Series</span><span class="pronunciation-telugu">రియాక్టివిటీ సిరీస్ (చర్యాశీలత వరుస)</span></div></td><td>Arrangement of metals by reactivity. Example: Zinc > Iron > Copper / ఉదా: లోహాల చర్యాశీలత క్రమం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">11. Basic Oxide</span><span class="pronunciation-telugu">బేసిక్ ఆక్సైడ్ (క్షార ఆక్సైడ్)</span></div></td><td>Metal oxide turning red litmus blue. Example: Magnesium oxide / ఉదా: మెగ్నీషియం ఆక్సైడ్.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">12. Acidic Oxide</span><span class="pronunciation-telugu">అసిడిక్ ఆక్సైడ్ (అమ్ల ఆక్సైడ్)</span></div></td><td>Non-metal oxide turning blue litmus red. Example: Sulphur dioxide / ఉదా: సల్ఫర్ డై ఆక్సైడ్.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">13. Rusting</span><span class="pronunciation-telugu">రస్టింగ్ (తుప్పు పట్టడం)</span></div></td><td>Iron oxidation in air and moisture. Example: Rusted iron gate / ఉదా: ఇనుప గేటు తుప్పు పట్టడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">14. Mercury</span><span class="pronunciation-telugu">మెర్క్యురీ (పాదరసం)</span></div></td><td>Liquid metal at room temperature. Example: Thermometer liquid / ఉదా: థర్మామీటర్‌లో పాదరసం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">15. Sodium</span><span class="pronunciation-telugu">సోడియం (సోడియం లోహం)</span></div></td><td>Highly reactive soft metal. Example: Stored in kerosene / ఉదా: కిరోసిన్‌లో దాచే సోడియం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">16. Sulphur</span><span class="pronunciation-telugu">సల్ఫర్ (గంధకం)</span></div></td><td>Yellow non-metal powder. Example: Firecracker powder / ఉదా: పటాకుల పొడి.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">17. Carbon</span><span class="pronunciation-telugu">కార్బన్ (కార్బన్)</span></div></td><td>Versatile non-metal element. Example: Activated carbon filter / ఉదా: వాటర్ ఫిల్టర్ కార్బన్.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">18. Iodine</span><span class="pronunciation-telugu">అయోడిన్ (అయోడిన్)</span></div></td><td>Lustrous non-metal antiseptic. Example: Tincture iodine / ఉదా: టించర్ అయోడిన్.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">19. Magnesium</span><span class="pronunciation-telugu">మెగ్నీషియం (మెగ్నీషియం)</span></div></td><td>Reactive silvery metal ribbon. Example: Burning magnesium strip / ఉదా: మెగ్నీషియం రిబ్బన్ మంట.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">20. Zinc</span><span class="pronunciation-telugu">జింక్ (తుతునాగం / జింక్)</span></div></td><td>Bluish-white brittle metal. Example: Galvanizing iron / ఉదా: ఇనుముకు పూత పూసే జింక్.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">21. Copper</span><span class="pronunciation-telugu">కాపర్ (రాగి)</span></div></td><td>Reddish-brown electrical metal. Example: Copper cooking vessels / ఉదా: రాగి పాత్రలు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">22. Iron</span><span class="pronunciation-telugu">ఐరన్ (ఇనుము)</span></div></td><td>Strong structural metal. Example: Iron nails and bridges / ఉదా: ఇనుప ములు మరియు వంతెనలు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">23. Gold</span><span class="pronunciation-telugu">గోల్డ్ (బంగారం)</span></div></td><td>Precious non-corroding metal. Example: Gold jewellery / ఉదా: బంగారు ఆభరణాలు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">24. Platinum</span><span class="pronunciation-telugu">ప్లాటినం (ప్లాటినం)</span></div></td><td>Precious dense inert metal. Example: Expensive rings / ఉదా: ఖరీదైన ఉంగరాలు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">25. Silver</span><span class="pronunciation-telugu">సిల్వర్ (వెండి)</span></div></td><td>Highly reflective precious metal. Example: Silver sweet foil / ఉదా: మిఠాయిలపై వెండి రేకు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">26. Lead</span><span class="pronunciation-telugu">లీడ్ (సీసం)</span></div></td><td>Heavy soft metal. Example: Lead radiation shields / ఉదా: రేడియేషన్ రక్షణ కవచాలు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">27. Tin</span><span class="pronunciation-telugu">టిన్ (టెన్ / తగరం)</span></div></td><td>Malleable corrosion-resistant metal. Example: Tin coated cans / ఉదా: తగరం పూసిన డబ్బాలు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">28. Steel</span><span class="pronunciation-telugu">స్టీల్ (ఉక్కు)</span></div></td><td>Iron-carbon alloy. Example: Steel utensils / ఉదా: ఉక్కు గిన్నెలు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">29. Pop Sound</span><span class="pronunciation-telugu">పాప్ సౌండ్ (చిటపట శబ్దం)</span></div></td><td>Sound of burning hydrogen gas. Example: Lit match near acid test tube / ఉదా: హైడ్రోజన్ వాయువు వచ్చే శబ్దం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">30. Deflagrating Spoon</span><span class="pronunciation-telugu">డెఫ్లాగ్రేటింగ్ స్పూన్ (మంట చెంచా)</span></div></td><td>Spoon used for burning powders in gas jars. Example: Burning sulphur spoon / ఉదా: పొడులను కాల్చే ప్రత్యేక చెంచా.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">31. Litmus Paper</span><span class="pronunciation-telugu">లిట్మస్ పేపర్ (లిట్మస్ కాగితం)</span></div></td><td>Acid-base indicator paper. Example: Red and blue litmus test / ఉదా: ఆమ్ల క్షారాలను తెలిపే కాగితం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">32. Distilled Water</span><span class="pronunciation-telugu">స్టిల్డ్ వాటర్ (స్వేదన జలం / స్వచ్ఛమైన నీరు)</span></div></td><td>Pure mineral-free water. Example: Battery water / ఉదా: లవణాలు లేని స్వచ్ఛమైన నీరు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">33. Copper Sulphate</span><span class="pronunciation-telugu">కాపర్ సల్ఫేట్ (మాయితుత్తం)</span></div></td><td>Blue salt solution. Example: Beaker solution in displacement test / ఉదా: నీలి రంగు ద్రావణం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">34. Zinc Sulphate</span><span class="pronunciation-telugu">జింక్ సల్ఫేట్ (జింక్ సల్ఫేట్ ద్రావణం)</span></div></td><td>Colourless salt solution. Example: Reacting salt solution / ఉదా: రంగులేని లవణ ద్రావణం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">35. Iron Sulphate</span><span class="pronunciation-telugu">ఐరన్ సల్ఫేట్ (ఫెర్రస్ సల్ఫేట్)</span></div></td><td>Light green salt solution. Example: Solution left by iron nail / ఉదా: లేత ఆకుపచ్చని ద్రావణం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">36. Hydrochloric Acid</span><span class="pronunciation-telugu">హైడ్రోక్లోరిక్ ఆమ్లం (హెచ్‌సిఎల్)</span></div></td><td>Laboratory strong acid. Example: Dilute acid metal test / ఉదా: ప్రయోగశాల ఆమ్లం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">37. Sulphuric Acid</span><span class="pronunciation-telugu">సల్ఫ్యూరిక్ ఆమ్లం (గంధకామ్లం)</span></div></td><td>Strong mineral acid. Example: Acid reactivity test / ఉదా: బలమైన ఆమ్లం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">38. Activated Carbon</span><span class="pronunciation-telugu">యాక్టివేటెడ్ కార్బన్ (శుద్ధి చేసిన కార్బన్)</span></div></td><td>Porous carbon adsorbent. Example: Water filter medium / ఉదా: నీటిని శుద్ధి చేసే కార్బన్.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">39. Tincture Iodine</span><span class="pronunciation-telugu">టించర్ అయోడిన్ (అయోడిన్ మందు)</span></div></td><td>Iodine in alcohol solution. Example: Antiseptic wound cleaner / ఉదా: గాయాలకు రాసే అయోడిన్ మందు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">40. Periodic Table</span><span class="pronunciation-telugu">పీరియాడిక్ టేబుల్ (ఆవర్తన పట్టిక)</span></div></td><td>Chart of chemical elements. Example: Finding metals in table / ఉదా: మూలకాల పట్టిక.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">41. Metalloid</span><span class="pronunciation-telugu">మెటలాయిడ్ (అర్ధ లోహం / లోహావ్యుత్పత్తి)</span></div></td><td>Elements with metal and non-metal properties. Example: Silicon and germanium / ఉదా: లోహాలు, అలోహాల ధర్మాలున్న సిలికాన్.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">42. Alloy</span><span class="pronunciation-telugu">అలాయ్ (మిశ్రమ లోహం)</span></div></td><td>Mixture of metals or metal with non-metal. Example: Brass and bronze / ఉదా: ఇత్తడి మరియు కాంస్యం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">43. Brass</span><span class="pronunciation-telugu">బ్రాస్ (ఇత్తడి)</span></div></td><td>Copper-zinc alloy. Example: Brass temple bells / ఉదా: ఇత్తడి గంటలు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">44. Bronze</span><span class="pronunciation-telugu">బ్రాంజ్ (కాంస్యం)</span></div></td><td>Copper-tin alloy. Example: Bronze medals / ఉదా: కాంస్య పతకాలు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">45. Solder</span><span class="pronunciation-telugu">సోల్డర్ (అతుకులు వేసే మిశ్రమ లోహం)</span></div></td><td>Lead-tin fusible alloy. Example: Electronic circuit soldering wire / ఉదా: వైర్లు అతుక్కోవడానికి వాడేది.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">46. Amalgam</span><span class="pronunciation-telugu">అమాల్గమ్ (పాదరస మిశ్రమ లోహం)</span></div></td><td>Alloy of mercury with other metals. Example: Dental silver filling amalgam / ఉదా: దంతాలకు వేసే పాదరస మిశ్రమం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">47. Galvanization</span><span class="pronunciation-telugu">గాల్వనైజేషన్ (తుప్పు పట్టకుండా జింక్ పూత)</span></div></td><td>Coating iron with zinc. Example: Galvanized iron sheets / ఉదా: ఇనుప రేకులకు జింక్ పూత.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">48. Sacrificial Protection</span><span class="pronunciation-telugu">సాక్రిఫిషియల్ ప్రొటెక్షన్ (బలిదాన రక్షణ పద్ధతి)</span></div></td><td>Protecting metal using a more reactive metal. Example: Zinc block on ship hull / ఉదా: నౌకలకు జింక్ బ్లాకులు అమర్చుట.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">49. Ores</span><span class="pronunciation-telugu">ఓర్స్ (ఖనిజ ఖజానాలు / ధాతువులు)</span></div></td><td>Naturally occurring rocks containing metals. Example: Bauxite for aluminium / ఉదా: బాక్సైట్ నుండి అల్యూమినియం తీయుట.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">50. Metallurgy</span><span class="pronunciation-telugu">మెటలర్జీ (లోహ సంగ్రహణ శాస్త్రం)</span></div></td><td>Science of extracting metals from ores. Example: Iron extraction process / ఉదా: ధాతువుల నుండి లోహాలను వేరుచేసే శాస్త్రం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">51. Smelting</span><span class="pronunciation-telugu">స్మెల్టింగ్ (ద్రవీభవన శుద్ధి)</span></div></td><td>Heat-extracting metal from ore with carbon. Example: Blast furnace iron smelting / ఉదా: భట్టీలో వేడి చేసి లోహాన్ని కరిగించడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">52. Calcination</span><span class="pronunciation-telugu">కాల్సినేషన్ (భర్జనం / వేడి చేయుట)</span></div></td><td>Heating ore in absence of air. Example: Carbonate ore treatment / ఉదా: గాలి లేకుండా ధాతువును వేడి చేయడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">53. Roasting</span><span class="pronunciation-telugu">రోస్టింగ్ (భస్మీకరణం / గాలితో వేడి చేయుట)</span></div></td><td>Heating ore in excess air. Example: Sulphide ore treatment / ఉదా: గాలి సమక్షంలో ధాతువును వేడి చేయడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">54. Refractory Bricks</span><span class="pronunciation-telugu">రిఫ్రాక్టరీ బ్రిక్స్ (ఉష్ణ నిరోధక ఇటుకలు)</span></div></td><td>Bricks withstanding extreme furnace heat. Example: Furnace inner lining bricks / ఉదా: భట్టీలలో వాడే ప్రత్యేక ఇటుకలు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">55. Slag</span><span class="pronunciation-telugu">స్లాగ్ (మలినాల బూడిద / మలన్)</span></div></td><td>Waste byproduct in metal smelting. Example: Iron blast furnace slag / ఉదా: లోహపు గనుల వ్యర్థ మలన్.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">56. Flux</span><span class="pronunciation-telugu">ఫ్లక్స్ (మలినాలను తొలగించే పదార్థం)</span></div></td><td>Chemical combining with impurities in smelting. Example: Limestone flux / ఉదా: మలినాలను తొలగించే రసాయనం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">57. Electrorefining</span><span class="pronunciation-telugu">ఎలక్ట్రోరిఫైనింగ్ (విద్యుత్ ద్వారా లోహ శుద్ధి)</span></div></td><td>Purifying metal via electrolysis. Example: Refining impure copper / ఉదా: విద్యుత్ ద్వారా రాగిని శుద్ధి చేయడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">58. Anode Mud</span><span class="pronunciation-telugu">నోడ్ మడ్ (అనోడ్ అవక్షేపం / బురద)</span></div></td><td>Precious metal sludge in refining. Example: Gold and silver sludge in copper refining / ఉదా: లోహ శుద్ధిలో మిగిలే విలువైన అవక్షేపం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">59. Tensile Strength</span><span class="pronunciation-telugu">టెన్సైల్ స్ట్రెంత్ (పీడన బలం / తన్యత సామర్థ్యం)</span></div></td><td>Resistance to breaking under tension. Example: Steel cable strength / ఉదా: తాడులా లాగినప్పుడు తెగిపోకుండా ఆగే శక్తి.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">60. Hardness</span><span class="pronunciation-telugu">హార్డ్‌నెస్ (గట్టిదనం)</span></div></td><td>Resistance to scratching or indentation. Example: Diamond scratching glass / ఉదా: గీత పడకుండా ఉండే గట్టిదనం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">61. Brittleness</span><span class="pronunciation-telugu">బ్రిటిల్‌నెస్ (పెళుసుదనం)</span></div></td><td>Breaking easily without plastic deformation. Example: Glass or sulphur lump shattering / ఉదా: సులభంగా ముక్కలైపోయే గుణం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">62. Toughness</span><span class="pronunciation-telugu">టఫ్‌నెస్ (మన్నిక / దృఢత్వం)</span></div></td><td>Ability to absorb shock without fracturing. Example: Hammer striking iron anvil / ఉదా: దెబ్బలను తట్టుకునే గట్టితనం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">63. Elasticity</span><span class="pronunciation-telugu">ఎలాస్టిసిటీ (స్థితిస్థాపకత)</span></div></td><td>Returning to original shape after stretch. Example: Steel spring rebound / ఉదా: సాగదీశాక తిరిగి పాత రూపానికి రావడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">64. Plasticity</span><span class="pronunciation-telugu">ప్లాస్టిసిటీ (రూపమిచ్చే గుణం)</span></div></td><td>Permanent deformation under load. Example: Moulding hot iron or clay / ఉదా: శాశ్వతంగా ఆకారం మార్చుకునే గుణం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">65. Thermal Expansion</span><span class="pronunciation-telugu">థర్మల్ ఎక్స్‌పాన్షన్ (ఉష్ణ వ్యాకోచం)</span></div></td><td>Expanding in size when heated. Example: Railway track expansion gaps / ఉదా: వేడికి వస్తువులు పెద్దవి కావడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">66. Electrical Resistance</span><span class="pronunciation-telugu">ఎలక్ట్రికల్ రెసిస్టెన్స్ (విద్యుత్ నిరోధం)</span></div></td><td>Opposition to electric current flow. Example: Nichrome wire heater resistance / ఉదా: కరెంట్ ప్రవాహాన్ని అడ్డుకునే గుణం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">67. Superconductivity</span><span class="pronunciation-telugu">సూపర్‌కండక్టివిటీ (అతి వాహకత)</span></div></td><td>Zero electrical resistance at low temperatures. Example: Liquid helium cooled magnets / ఉదా: నిరోధం లేని విద్యుత్ ప్రసారం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">68. Semiconductor</span><span class="pronunciation-telugu">సెమీకండక్టర్ (అర్ధ వాహకం)</span></div></td><td>Conductivity between conductor and insulator. Example: Silicon microchip / ఉదా: సిలికాన్ చిప్స్.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">69. Insulator</span><span class="pronunciation-telugu">ఇన్సులేటర్ (బంధకం / విద్యుత్ నిరోధకం)</span></div></td><td>Material not conducting electricity. Example: Rubber glove or dry wood / ఉదా: కరెంట్ ప్రసరించని పదార్థం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">70. Thermal Conductivity</span><span class="pronunciation-telugu">థర్మల్ కండక్టివిటీ (ఉష్ణ వాహక సామర్థ్యం)</span></div></td><td>Rate of heat transfer through material. Example: Copper frying pan efficiency / ఉదా: ఉష్ణాన్ని వేగంగా బదిలీ చేసే గుణం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">71. Noble Metals</span><span class="pronunciation-telugu">నోబుల్ మెటల్స్ (ఉదాత్త లోహాలు)</span></div></td><td>Metals resistant to corrosion and oxidation. Example: Gold, platinum, silver / ఉదా: తుప్పు పట్టని రాచరిక లోహాలు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">72. Reactive Metals</span><span class="pronunciation-telugu">రియాక్టివ్ మెటల్స్ (చర్యాశీల లోహాలు)</span></div></td><td>Metals reacting vigorously with air/water. Example: Potassium and sodium / ఉదా: గాలితో వేగంగా చర్య జరిపే లోహాలు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">73. Amphoteric Oxide</span><span class="pronunciation-telugu">ఆంఫోటెరిక్ ఆక్సైడ్ (ఉభయధర్మ ఆక్సైడ్)</span></div></td><td>Oxide reacting with both acids and bases. Example: Aluminium oxide and zinc oxide / ఉదా: ఆమ్లాలు, క్షారాలతో రెండింటితోనూ చర్య జరిపేది.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">74. Neutral Oxide</span><span class="pronunciation-telugu">న్యూట్రల్ ఆక్సైడ్ (తటస్థ ఆక్సైడ్)</span></div></td><td>Oxide neither acidic nor basic. Example: Carbon monoxide and water / ఉదా: ఆమ్ల క్షార గుణాలు లేని ఆక్సైడ్.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">75. Peroxide</span><span class="pronunciation-telugu">పెరాక్సైడ్ (పెరాక్సైడ్ సమ్మేళనం)</span></div></td><td>Oxide with single oxygen-oxygen bond. Example: Hydrogen peroxide disinfectant / ఉదా: హైడ్రోజన్ పెరాక్సైడ్ మందు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">76. Superoxide</span><span class="pronunciation-telugu">సూపరాక్సైడ్ (సూపరాక్సైడ్)</span></div></td><td>Compound containing the $O_2^-$ ion. Example: Potassium superoxide in oxygen masks / ఉదా: ఆక్సిజన్ మాస్కులలో వాడేది.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">77. Suboxide</span><span class="pronunciation-telugu">సబాక్సైడ్ (సబాక్సైడ్)</span></div></td><td>Oxide with lower proportion of oxygen. Example: Carbon suboxide / ఉదా: తక్కువ ఆక్సిజన్ ఉన్న ఆక్సైడ్.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">78. Mixed Oxide</span><span class="pronunciation-telugu">మిక్స్డ్ ఆక్సైడ్ (మిశ్రమ ఆక్సైడ్)</span></div></td><td>Oxide behaving as combination of two simple oxides. Example: Magnetite ($Fe_3O_4$) / ఉదా: మాగ్నెటైట్ ఇనుప ఖనిజం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">79. Native State</span><span class="pronunciation-telugu">నేటివ్ స్టేట్ (స్వేచ్ఛా / సహజ రూపం)</span></div></td><td>Elements found uncombined in nature. Example: Native gold nuggets / ఉదా: ప్రకృతిలో విడిగా లభించే బంగారం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">80. Combined State</span><span class="pronunciation-telugu">కంబైన్డ్ స్టేట్ (సంయుక్త రూపం)</span></div></td><td>Elements existing as chemical compounds in ores. Example: Iron oxide ore / ఉదా: ఖనిజాల రూపంలో ముడి పదార్థంగా ఉండటం.</td></tr>
+
+                <!-- Additional 80 Glossary Terms (81 to 160) -->
+                <tr><td><div class="term-container"><span class="eng-term">81. Extraction of Iron</span><span class="pronunciation-telugu">ఎక్స్‌ట్రాక్షన్ ఆఫ్ ఐరన్ (ఇనుమును వెలికితీయుట)</span></div></td><td>Process of obtaining iron from haematite ore. Example: Blast furnace production / ఉదా: ఇనుప ఖనిజం నుండి ఇనుమును వేరుచేయడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">82. Blast Furnace</span><span class="pronunciation-telugu">బ్లాస్ట్ ఫర్నేస్ (ప్రవాహ కొలిమి)</span></div></td><td>Tall industrial smelting furnace. Example: Steel mill ironmaking furnace / ఉదా: ఇనుము కరిగించే పెద్ద పారిశ్రామిక భట్టీ.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">83. Pig Iron</span><span class="pronunciation-telugu">పిగ్ ఐరన్ (ముడి ఇనుము)</span></div></td><td>Crude high-carbon iron from blast furnace. Example: Raw cast iron blocks / ఉదా: భట్టీ నుండి వచ్చే ముడి ఇనుము.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">84. Cast Iron</span><span class="pronunciation-telugu">కాస్ట్ ఐరన్ (పోత ఇనుము)</span></div></td><td>Hard brittle iron shaped by casting. Example: Heavy machine bases / ఉదా: అచ్చులో పోసి చేసిన గట్టి ఇనుము.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">85. Wrought Iron</span><span class="pronunciation-telugu">రౌట్ ఐరన్ (తుత్తునియలు కాని సాగే ఇనుము / తాటి ఇనుము)</span></div></td><td>Purest form of malleable iron. Example: Decorative iron gates and chains / ఉదా: అత్యంత శుద్ధమైన సాగే ఇనుము.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">86. Galvanized Iron</span><span class="pronunciation-telugu">గాల్వనైజ్డ్ ఐరన్ (జింక్ పూత పూసిన ఇనుము)</span></div></td><td>Zinc-coated rustproof iron sheet. Example: Roofing corrugated sheets / ఉదా: తుప్పు పట్టని జింక్ పూత ఇనుప రేకులు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">87. Patina</span><span class="pronunciation-telugu">పాటినా (రాగిపై ఏర్పడే ఆకుపచ్చ పొర)</span></div></td><td>Green carbonate layer on weathered copper. Example: Statue of Liberty green coating / ఉదా: పాత రాగి విగ్రహాలపై వచ్చే ఆకుపచ్చ రంగు పొర.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">88. Anodizing</span><span class="pronunciation-telugu">అనోడైజింగ్ (అల్యూమినియం రక్షణ పూత ప్రక్రియ)</span></div></td><td>Electrochemical oxidation thickening aluminium surface. Example: Aluminium cookware protective coating / ఉదా: అల్యూమినియం పాత్రలపై గట్టి పొరను ఏర్పరచుట.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">89. Pyrite (Fool's Gold)</span><span class="pronunciation-telugu">పైరైట్ (మోసపు బంగారం / ఇనుప పైరైట్)</span></div></td><td>Iron sulphide mineral resembling gold. Example: Fool's gold mineral sample / ఉదా: చూడటానికి బంగారంలా కనిపించే ఖనిజం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">90. Bauxite</span><span class="pronunciation-telugu">బాక్సైట్ (అల్యూమినియం ఖనిజ ధాతువు)</span></div></td><td>Primary ore of aluminium. Example: Aluminium refinery raw ore / ఉదా: అల్యూమినియం తయారీకి వాడే ప్రధాన ఖనిజం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">91. Haematite</span><span class="pronunciation-telugu">హెమటైట్ (ఇనుప ముడి ఖనిజం)</span></div></td><td>Iron oxide ore. Example: Reddish iron ore rock / ఉదా: ఎరుపు రంగు ఇనుప ఖనిజం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">92. Magnetite</span><span class="pronunciation-telugu">మాగ్నెటైట్ (అయస్కాంత ఇనుప ఖనిజం)</span></div></td><td>Magnetic iron oxide ore. Example: Naturally magnetic iron stone / ఉదా: సహజంగా అయస్కాంత గుణమున్న ఇనుప ఖనిజం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">93. Cinnabar</span><span class="pronunciation-telugu">సిన్నబార్ (పాదరస ఖనిజ ధాతువు)</span></div></td><td>Mercury sulphide ore. Example: Red mercury ore mineral / ఉదా: పాదరసం లభించే ముడి ఖనిజం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">94. Galena</span><span class="pronunciation-telugu">గెలీనా (సీసపు ఖనిజ ధాతువు)</span></div></td><td>Lead sulphide ore. Example: Shiny grey lead ore / ఉదా: సీసం లభించే ప్రధాన ఖనిజం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">95. Sphalerite</span><span class="pronunciation-telugu">స్ఫాలరైట్ (జింక్ బ్లెండ్ / జింక్ ఖనిజం)</span></div></td><td>Zinc sulphide ore. Example: Primary zinc mining ore / ఉదా: జింక్ లభించే ఖనిజం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">96. Malachite</span><span class="pronunciation-telugu">మాలాచైట్ (పచ్చని రాగి ఖనిజం)</span></div></td><td>Green copper carbonate mineral. Example: Ornamental green copper stone / ఉదా: ఆకుపచ్చని రాగి ఖనిజ రాయి.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">97. Cryolite</span><span class="pronunciation-telugu">క్రయోలైట్ (అల్యూమినియం ద్రావక ఉప్పు)</span></div></td><td>Sodium aluminium fluoride flux. Example: Electrolytic aluminium extraction bath / ఉదా: అల్యూమినియం శుద్ధిలో వాడే ఉప్పు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">98. Hall Process</span><span class="pronunciation-telugu">హాల్ ప్రక్రియ (అల్యూమినియం విద్యుత్ ఉత్పాదక విధానం)</span></div></td><td>Electrolytic extraction of aluminium. Example: Industrial bauxite processing / ఉదా: అల్యూమినియంను వేరుచేసే విద్యుత్ పద్ధతి.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">99. Thermite Process</span><span class="pronunciation-telugu">థర్మైట్ ప్రక్రియ (రైల్వే పట్టాలు అతుకు విధానం)</span></div></td><td>Exothermic metal welding reaction using aluminum powder. Example: Welding cracked railway tracks / ఉదా: అల్యూమినియం పొడితో రైల్వే పట్టాలు అతుకుట.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">100. Solder Wire</span><span class="pronunciation-telugu">సోల్డర్ వైర్ (ఎలక్ట్రానిక్స్ అతుకుల తీగ)</span></div></td><td>Low-melting alloy wire for circuit boards. Example: Soldering electronic components / ఉదా: రేడియో టీవీ బోర్డులలో వైర్లు అతుకు తీగ.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">101. Pewter</span><span class="pronunciation-telugu">ప్యూటర్ (తగరం ఆధారిత మిశ్రమ లోహం)</span></div></td><td>Malleable tin alloy tableware metal. Example: Decorative cups and plates / ఉదా: తగరంతో చేసిన అలంకరణ పాత్రలు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">102. Sterling Silver</span><span class="pronunciation-telugu">స్టెర్లింగ్ సిల్వర్ (నాణ్యమైన వెండి మిశ్రమం)</span></div></td><td>Alloy of 92.5% silver and copper. Example: Fine silver silverware / ఉదా: గట్టిదనం కోసం రాగి కలిపిన నాణ్యమైన వెండి.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">103. Rose Gold</span><span class="pronunciation-telugu">రోజ్ గోల్డ్ (గులాబీ బంగారు మిశ్రమం)</span></div></td><td>Gold and copper alloy. Example: Modern pinkish gold jewellery / ఉదా: బంగారానికి రాగి కలిపితే వచ్చే గులాబీ రంగు బంగారం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">104. White Gold</span><span class="pronunciation-telugu">వైట్ గోల్డ్ (తెల్ల బంగారం)</span></div></td><td>Gold alloyed with white metals like palladium or nickel. Example: Modern diamond ring band / ఉదా: పల్లాడియం కలిపిన తెల్లటి బంగారం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">105. Carat (Gold Purity)</span><span class="pronunciation-telugu">క్యారెట్ (బంగారపు స్వచ్ఛత కొలత)</span></div></td><td>Measure of gold purity out of 24 parts. Example: 22-carat gold jewellery / ఉదా: బంగారపు స్వచ్ఛతను తెలిపే కొలత (ఉదా: 22 క్యారెట్లు).</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">106. Allotropy</span><span class="pronunciation-telugu">అలోట్రోపి (బరూపత / రూపాంతరత)</span></div></td><td>Existence of element in different physical forms. Example: Diamond and graphite carbon allotropes / ఉదా: ఒకే మూలకం వేర్వేరు రూపాలలో ఉండుట (ఉదా: డైమండ్, గ్రాఫైట్).</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">107. Diamond</span><span class="pronunciation-telugu">డైమండ్ / వజ్రం (వజ్రం)</span></div></td><td>Hardest natural carbon allotrope. Example: Diamond engagement ring gemstone / ఉదా: అత్యంత గట్టిదైన కార్బన్ రూపం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">108. Buckminsterfullerene</span><span class="pronunciation-telugu">బక్మిన్‌స్టర్‌ఫులరిన్ (బక్కీ బాల్ కార్బన్ అణువు)</span></div></td><td>Spherical carbon allotrope ($C_{60}$). Example: Nano-carbon sphere molecule / ఉదా: బంతి ఆకారంలో ఉండే కార్బన్ అణువు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">109. Graphene</span><span class="pronunciation-telugu">గ్రాఫీన్ (గ్రాఫీన్ పొర)</span></div></td><td>Single layer of graphite honeycomb carbon. Example: Super-strong nano-material / ఉదా: కేవలం ఒక పరమాణు మందం గల కార్బన్ పొర.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">110. Amorphous Carbon</span><span class="pronunciation-telugu">అమార్ఫస్ కార్బన్ (స్పటిక రూపం లేని కార్బన్)</span></div></td><td>Non-crystalline carbon form. Example: Charcoal and lampblack / ఉదా: స్పటిక ఆకారం లేని బొగ్గు పొడి.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">111. Coke (Carbon)</span><span class="pronunciation-telugu">కోక్ (శుద్ధ కార్బన్ బొగ్గు)</span></div></td><td>Carbon residue from destructive distillation of coal. Example: Blast furnace fuel / ఉదా: బొగ్గును గాలిలేకుండా మంటకిస్తే వచ్చే గట్టి పదార్థం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">112. Lamp Black</span><span class="pronunciation-telugu">లాంప్ బ్లాక్ (దీపపు మసి)</span></div></td><td>Fine carbon soot. Example: Black ink and tyre filler / ఉదా: దీపం మసి (నల్లటి పొడి).</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">113. Bone Charcoal</span><span class="pronunciation-telugu">బోన్ చార్కోల్ (జంతువుల ఎముకల బొగ్గు)</span></div></td><td>Carbonized animal bones. Example: Sugar refining decolorizer / ఉదా: జంతువుల ఎముకలను కాల్చగా వచ్చిన బొగ్గు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">114. Gas Carbon</span><span class="pronunciation-telugu">గ్యాస్ కార్బన్ (గ్యాస్ కార్బన్)</span></div></td><td>Carbon deposit in coal gas retorts. Example: Arc lamp carbon electrodes / ఉదా: కోలు గ్యాస్ తయారీలో ఏర్పడే కార్బన్.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">115. Sublimation</span><span class="pronunciation-telugu">సబ్లిమేషన్ (ఉర్ధ్వపతనం)</span></div></td><td>Direct transition from solid to gas. Example: Iodine crystals heating / ఉదా: ఘన పదార్థం నేరుగా ఆవిరిగా మారుట (అయోడిన్).</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">116. Halogens</span><span class="pronunciation-telugu">హలోజెన్స్ (లవణ జనక మూలకాలు)</span></div></td><td>Reactive non-metal group 17 elements. Example: Chlorine, bromine, iodine / ఉదా: క్లోరిన్, అయోడిన్ వంటి మూలకాలు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">117. Noble Gases</span><span class="pronunciation-telugu">నోబుల్ గ్యాసెస్ (జడ వాయువులు / ఉదాత్త వాయువులు)</span></div></td><td>Unreactive group 18 gases. Example: Helium, neon, argon / ఉదా: హీలియం, ఆర్గాన్ వంటి చర్య జరపని వాయువులు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">118. Alkali Metals</span><span class="pronunciation-telugu">ఆల్కలీ మెటల్స్ (క్షార లోహాలు)</span></div></td><td>Reactive group 1 metals. Example: Sodium and potassium / ఉదా: సోడియం, పొటాషియం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">119. Alkaline Earth Metals</span><span class="pronunciation-telugu">ఆల్కలైన్ ఎర్త్ మెటల్స్ (క్షార భూమి లోహాలు)</span></div></td><td>Group 2 reactive metals. Example: Magnesium and calcium / ఉదా: మెగ్నీషియం, కాల్షియం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">120. Transition Metals</span><span class="pronunciation-telugu">ట్రాన్సిషన్ మెటల్స్ (పరివర్తన లోహాలు)</span></div></td><td>D-block periodic table metals. Example: Iron, copper, nickel, zinc / ఉదా: ఇనుము, రాగి, నికెల్ వంటి లోహాలు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">121. Heavy Metals</span><span class="pronunciation-telugu">హెవీ మెటల్స్ (భారీ లోహాలు)</span></div></td><td>Metals with high atomic weight and density. Example: Lead, mercury, cadmium / ఉదా: సీసం, పాదరసం, కాడ్మియం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">122. Trace Elements</span><span class="pronunciation-telugu">ట్రేస్ ఎలిమెంట్స్ (సూక్ష్మ పోషక మూలకాలు)</span></div></td><td>Elements needed in tiny quantities by living organisms. Example: Iron in blood hemoglobin / ఉదా: శరీరానికి అతి తక్కువ మోతాదులో కావలసినవి.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">123. Galvanic Cell</span><span class="pronunciation-telugu">గాల్వినిక్ సెల్ (గాల్వినిక్ విద్యుత్ ఘటం)</span></div></td><td>Cell generating electricity via spontaneous redox reactions. Example: Daniel cell metal couple / ఉదా: లోహాల రసాయన చర్యతో కరెంట్ ఇచ్చే సెల్.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">124. Sacrificial Anode</span><span class="pronunciation-telugu">సాక్రిఫిషియల్ యానోడ్ (బలిదాన అనోడ్)</span></div></td><td>Active metal corroding to protect underlying structure. Example: Zinc anode on steel ship propeller / ఉదా: ఓడలకు అమర్చే జింక్ దిమ్మె.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">125. Pitting Corrosion</span><span class="pronunciation-telugu">పిట్టింగ్ కొరోషన్ (చిన్న గుంటల తుప్పు అరుగుదల)</span></div></td><td>Localized corrosion creating small holes in metal. Example: Stainless steel pit in salt water / ఉదా: లోహాలపై చిన్న రంధ్రాలుగా పడే తుప్పు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">126. Stress Corrosion Cracking</span><span class="pronunciation-telugu">స్ట్రెస్ కొరోషన్ క్రాకింగ్ (పీడన తుప్పు పగుళ్ళు)</span></div></td><td>Crack propagation under tensile stress and corrosive environment. Example: Brass pipe splitting under stress / ఉదా: పీడనం మరియు తుప్పు వల్ల వచ్చే పగుళ్ళు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">127. Intergranular Corrosion</span><span class="pronunciation-telugu">ఇంటర్‌గ్రాన్యులర్ కొరోషన్ (అణువుల సరిహద్దు తుప్పు)</span></div></td><td>Corrosion along metal grain boundaries. Example: Improperly welded stainless steel joint / ఉదా: లోహపు రేణువుల సరిహద్దులలో వచ్చే తుప్పు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">128. Crevice Corrosion</span><span class="pronunciation-telugu">క్రెవిస్ కొరోషన్ (సందుల తుప్పు)</span></div></td><td>Corrosion occurring in narrow gaps or crevices. Example: Under bolted washer rust / ఉదా: రెండు బిగువైన ముక్కల సందులలో వచ్చే తుప్పు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">129. Cathodic Protection</span><span class="pronunciation-telugu">కాథోడిక్ ప్రొటెక్షన్ (కాథోడ్ రక్షణ పద్ధతి)</span></div></td><td>Technique controlling metal surface corrosion by making it cathode. Example: Pipeline corrosion protection / ఉదా: పైప్‌లైన్లకు కరెంట్ ఇచ్చి తుప్పు పట్టకుండా ఆపుట.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">130. Passivation</span><span class="pronunciation-telugu">పాసివేషన్ (నిష్క్రియ రక్షణ పొర ఏర్పాటు)</span></div></td><td>Spontaneous formation of a hard anti-corrosion oxide film. Example: Chromium oxide film on stainless steel / ఉదా: లోహంపై దానంతటదే ఏర్పడే రక్షణ పొర.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">131. Metal Powder Metallurgy</span><span class="pronunciation-telugu">మెటల్ పౌడర్ మెటలర్జీ (పొడి లోహ శాస్త్ర సాంకేతికత)</span></div></td><td>Making metal objects from compressed metal powders. Example: Sintered porous bronze bearings / ఉదా: లోహపు పొడిని అచ్చులో నొక్కి వస్తువులు చేయడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">132. Sintering</span><span class="pronunciation-telugu">సింటరింగ్ (వేడి చేసి ముక్కలను అతుకు ప్రక్రియ)</span></div></td><td>Compact heating metal powder without complete melting. Example: Tungsten lightbulb filament making / ఉదా: పూర్తిగా కరగకుండా వేడి చేసి లోహపు పొడిని గట్టిపరచడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">133. Forging</span><span class="pronunciation-telugu">ఫోర్జింగ్ (సుత్తితో కొట్టి ఆకారమిచ్చుట)</span></div></td><td>Shaping hot metal using compressive forces. Example: Blacksmith hammering horseshoes / ఉదా: కాగిన ఇనుమును సుత్తితో కొట్టి ఆకారం తెచ్చుట.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">134. Rolling (Metal)</span><span class="pronunciation-telugu">రోలింగ్ (లోహపు రేకులుగా సాగదీయుట)</span></div></td><td>Passing metal through heavy rollers to make sheets. Example: Steel sheet rolling mill / ఉదా: రోలర్ల మధ్య పంపి ఇనుప రేకులు చేయడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">135. Extrusion (Metal)</span><span class="pronunciation-telugu">ఎక్స్‌‌ట్రూషన్ (లోహపు తీగలు/గొట్టాలు పిండే పద్ధతి)</span></div></td><td>Pushing metal through a die to create long objects. Example: Aluminium window frame extrusion / ఉదా: అచ్చు గుండా లోహాన్ని వెన్నాడి తీగలు చేయడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">136. Drawing (Metal)</span><span class="pronunciation-telugu">డ్రాయింగ్ (లోహాలను లాగి తీగలు చేయుట)</span></div></td><td>Pulling metal through a conical die to reduce diameter. Example: Copper wire drawing factory / ఉదా: రంధ్రాల గుండా లాగి సన్నని తీగలు చేయడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">137. Casting (Metal)</span><span class="pronunciation-telugu">కాస్టింగ్ (ద్రవ లోహపు పోత పోయుట)</span></div></td><td>Pouring molten metal into a mould cavity. Example: Engine cylinder block casting / ఉదా: కరిగిన లోహాన్ని అచ్చులో పోసి గడ్డకట్టించడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">138. Annealing</span><span class="pronunciation-telugu">అన్నీలింగ్ (మెత్తబరుచు ఉష్ణోగ్రత ప్రక్రియ)</span></div></td><td>Heat treatment altering hardness and ductility. Example: Softening hard drawn copper wire / ఉదా: గట్టి లోహాన్ని వేడి చేసి మెత్తగా మార్చే ప్రక్రియ.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">139. Quenching</span><span class="pronunciation-telugu">క్వెన్చింగ్ (ద్రవంలో ముంచి గట్టిపరచుట)</span></div></td><td>Rapid cooling of hot metal in water or oil. Example: Hardening steel sword blade / ఉదా: కాగిన లోహాన్ని నీటిలో ముంచి గట్టిపరచడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">140. Tempering</span><span class="pronunciation-telugu">టెంపరింగ్ (పదును పెట్టుట / దృఢపరచుట)</span></div></td><td>Reheating quenched metal to reduce brittleness. Example: Making tool steel tough / ఉదా: పెళుసుదనం తగ్గించి గట్టిదనం తెచ్చే ప్రక్రియ.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">141. Case Hardening</span><span class="pronunciation-telugu">కేస్ హార్డెనింగ్ (పైభాగం గట్టిపరచుట)</span></div></td><td>Hardening outer metal surface while keeping core tough. Example: Gear teeth case hardening / ఉదా: లోహపు ఉపరితలాన్ని మాత్రమే గట్టిపరచడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">142. Carburizing</span><span class="pronunciation-telugu">కార్బ్యురైజింగ్ (కార్బన్ పూత ఇచ్చి గట్టిపరచుట)</span></div></td><td>Infusing carbon into hot iron surface. Example: Steel surface hardening treatment / ఉదా: వేడి ఇనుముకు కార్బన్ పట్టించి గట్టిచేయడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">143. Nitriding</span><span class="pronunciation-telugu">నైట్రిడింగ్ (నైట్రోజన్ తో గట్టిపరచుట)</span></div></td><td>Hardening steel via nitrogen diffusion. Example: High-wear crankshaft treatment / ఉదా: నైట్రోజన్ గ్యాస్‌‌తో లోహాన్ని గట్టిపరచడం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">144. Cyaniding</span><span class="pronunciation-telugu">సయనైడింగ్ (సయనైడ్ ఉప్పుతో గట్టిపరచుట)</span></div></td><td>Case hardening using molten cyanide salt bath. Example: Fast steel surface hardening / ఉదా: సయనైడ్ లవణ ద్రావణంలో లోహాన్ని గట్టిపరచుట.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">145. Metallic Bond</span><span class="pronunciation-telugu">మెటాలిక్ బాండ్ (లోహ బంధం)</span></div></td><td>Chemical bonding from sea of delocalized electrons. Example: Strong bonding in copper atoms / ఉదా: లోహ పరమాణువుల మధ్య ఉండే బలమైన బంధం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">146. Ionic Bond</span><span class="pronunciation-telugu">అయానిక్ బాండ్ (అయానిక్ బంధం)</span></div></td><td>Bond formed by electron transfer between metal and non-metal. Example: Sodium chloride salt bond / ఉదా: ఎలక్ట్రాన్ల బదిలీ ద్వారా ఏర్పడే బంధం (ఉప్పు).</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">147. Covalent Bond</span><span class="pronunciation-telugu">కోవలెంట్ బాండ్ (సహసంయోజనీయ బంధం)</span></div></td><td>Bond formed by sharing electrons between non-metals. Example: Water and carbon dioxide molecule bond / ఉదా: ఎలక్ట్రాన్ల పంచుకోవడం ద్వారా ఏర్పడే బంధం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">148. Crystal Lattice</span><span class="pronunciation-telugu">క్రిస్టల్ లాటిస్ (స్పటిక జాలకం)</span></div></td><td>Ordered repeating 3D atomic arrangement in solids. Example: Salt and metal atomic structure / ఉదా: ఘన పదార్థాలలో పరమాణువుల క్రమ అమరిక.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">149. Unit Cell</span><span class="pronunciation-telugu">యూనిట్ సెల్ (ఏకక కోశం)</span></div></td><td>Smallest repeating structural unit of a crystal. Example: Cubic crystal unit cell / ఉదా: స్పటికంలో అతి చిన్న పునరావృత యూనిట్.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">150. Dislocation (Crystal)</span><span class="pronunciation-telugu">డిస్లోకేషన్ (స్పటిక లోపం / అణువుల జారుడు)</span></div></td><td>Crystallographic defect allowing metal bending. Example: Plastic deformation mechanism in iron / ఉదా: లోహాలు వందడానికి కారణమయ్యే అణు లోపం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">151. Grain Boundary</span><span class="pronunciation-telugu">గ్రైండ్ బౌండరీ (రేణువుల సరిహద్దు)</span></div></td><td>Interface where crystals of different orientations meet. Example: Microscopic metal grain edges / ఉదా: వేర్వేరు స్పటికాల మధ్య కలిసే సరిహద్దు.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">152. Creep (Metal)</span><span class="pronunciation-telugu">క్రీప్ (లోహాల నెమ్మదైన సాగుదల)</span></div></td><td>Slow permanent deformation under long-term high stress. Example: Turbine blades stretching under heat / ఉదా: ఎక్కువ వేడి మరియు బరువు వల్ల లోహాలు నెమ్మదిగా సాగుట.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">153. Fatigue Limit</span><span class="pronunciation-telugu">ఫెటిగ్ లిమిట్ (అలసటావధి పరిమితి)</span></div></td><td>Max stress a metal can endure for infinite cycles without failure. Example: Rotating axle fatigue rating / ఉదా: విరిగిపోకుండా కోటానుకోట్ల సార్లు తట్టుకునే శక్తి.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">154. Hardness Scale (Mohs)</span><span class="pronunciation-telugu">మోస్ హార్డ్‌నెస్ స్కేల్ (మోస్ గట్టితనపు కొలమానం)</span></div></td><td>Scale rating mineral scratching hardness from 1 to 10. Example: Diamond rated 10, talc rated 1 / ఉదా: ఖనిజాల గట్టితనాన్ని కొలిచే మోస్ స్కేల్.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">155. Galvanometer</span><span class="pronunciation-telugu">గాల్వనోమీటర్ (విద్యుత్ ప్రవాహ సూచిక)</span></div></td><td>Sensitive instrument detecting small electric currents. Example: Electrical conductivity lab tester meter / ఉదా: చిన్న కరెంట్ ప్రవాహాన్ని గుర్తించే పరికరం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">156. Thermocouple</span><span class="pronunciation-telugu">థర్మోకపుల్ (ఉష్ణ విద్యుత్ మాపకం)</span></div></td><td>Sensor measuring temperature using two dissimilar metal wires. Example: Industrial furnace temperature probe / ఉదా: రెండు వేర్వేరు లోహాలతో ఉష్ణోగ్రత కొలిచే పరికరం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">157. Piezoelectric Effect</span><span class="pronunciation-telugu">పిజోఎలెక్ట్రిక్ ఎఫెక్ట్ (పీడన విద్యుత్ ప్రభావం)</span></div></td><td>Generating electricity from mechanical pressure in certain crystals. Example: Quartz crystal watch oscillator / ఉదా: పీడనం వల్ల విద్యుత్ పుట్టించే స్పటిక గుణం.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">158. Photoelectric Effect</span><span class="pronunciation-telugu">ఫోటోఎలెక్ట్రిక్ ఎఫెక్ట్ (కాంతి విద్యుత్ ప్రభావం)</span></div></td><td>Emission of electrons when light hits metal surface. Example: Solar panel light absorption / ఉదా: కాంతి తగిలినప్పుడు లోహాల నుండి ఎలక్ట్రాన్లు వెలువడుట.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">159. Thermionic Emission</span><span class="pronunciation-telugu">థర్మయానిక్ ఎమిషన్ (ఉష్ణ ఎలక్ట్రాన్ ఉద్గారత)</span></div></td><td>Release of electrons from heated metal. Example: Old vacuum tube cathode ray emission / ఉదా: వేడి చేసిన లోహం నుండి ఎలక్ట్రాన్లు విడుదలవుట.</td></tr>
+                <tr><td><div class="term-container"><span class="eng-term">160. Metallic Latch</span><span class="pronunciation-telugu">మెటాలిక్ లాచ్ (లోహపు గడియ / తాళం కొంకె)</span></div></td><td>Secure metal fastener or lock component. Example: Door metal latch lock / ఉదా: తలుపులకు బిగించే లోహపు గడియ.</td></tr>
+            </table>
+        </div>
+
+        <!-- ================= CHAPTER 4: COMPLETE EXERCISES (REFLECTIONS, APPS, HOTS, MCQS, PROJECTS & EXPERIMENTS) ================= -->
+        <div id="ch4-exercises" class="card">
+            <h1>Chapter 4: Complete "Improve Your Learning" Exercises, Solutions & Suggested Experiments</h1>
+            
+            <h2>Reflections on Concepts (సరికాని భావనల ప్రతిబింబాలు)</h2>
+
+            <div class="qa-box">
+                <p class="question">1. Explain about ductility. (AS1)</p>
+                <p><strong>Answer:</strong> Ductility is the physical property of a material that allows it to be drawn or stretched into fine, thin wires without breaking. Most metals (like copper, gold, aluminium, and iron) possess high ductility, making them ideal for electrical wiring and cables.</p>
+                <div class="telugu-desc"><strong>తెలుగు వివరణ:</strong> డక్టిలిటీ అనగా లోహాలను సన్నని తీగలుగా మార్చే గుణం. ఉదాహరణకు రాగి మరియు అల్యూమినియం తీగలను విద్యుత్ ప్రసరణ కోసం వాడతాం, ఎందుకంటే వాటికి తీగలుగా సాగే గుణం ఎక్కువగా ఉంటుంది.</div>
+            </div>
+
+            <div class="qa-box">
+                <p class="question">2. Explain the physical properties of metals with suitable examples. (AS1)</p>
+                <p><strong>Answer:</strong> 
+                    1. <strong>Lustre:</strong> Metals have a shining surface (e.g., gold and polished silver).<br>
+                    2. <strong>Sonority:</strong> Metals produce a ringing sound when dropped or struck (e.g., school bells made of brass/iron).<br>
+                    3. <strong>Malleability:</strong> Metals can be beaten into thin sheets (e.g., aluminium foil for food packing).<br>
+                    4. <strong>Ductility:</strong> Metals can be drawn into wires (e.g., copper wires in household circuits).<br>
+                    5. <strong>Conduction:</strong> Metals are good conductors of heat and electricity (e.g., copper and iron vessels).
+                </p>
+                <div class="telugu-desc"><strong>తెలుగు వివరణ:</strong> లోహాల ప్రధాన భౌతిక ధర్మాలు: 1. మెరుపు (బంగారం, వెండి మెరుస్తాయి), 2. శబ్ద గుణం (స్కూలు గంటలు శబ్దం చేస్తాయి), 3. రేఖా గుణం (అల్యూమినియం రేకులు), 4. తీగలుగా మారుట (రాగి తీగలు), 5. ఉష్ణ మరియు విద్యుత్ వాహకత (వంట పాత్రలు).</div>
+            </div>
+
+            <div class="qa-box">
+                <p class="question">3. Draw the diagram of identifying electric conductivity of a material. (AS5)</p>
+                <p><strong>Answer:</strong> To test electrical conductivity, set up a simple electric circuit comprising a dry cell battery, an electric bulb or LED, connecting wires, and a testing gap with two clips where sample materials (like iron nails or copper wire) are inserted to complete the circuit and glow the bulb.</p>
+                <div class="telugu-desc"><strong>తెలుగు వివరణ:</strong> విద్యుత్ వాహకతను పరీక్షించడానికి బ్యాటరీ, బల్బ్ లేదా ఎల్.ఇ.డి, కనెక్టింగ్ వైర్లు మరియు టెస్టింగ్ క్లిప్‌లతో కూడిన వలయాన్ని అమర్చి, దాని మధ్యలో ఇనుప ములు వంటి నమూనాలను ఉంచి బల్బ్ వెలుగుతుందో లేదో పరీక్షించాలి.</div>
+            </div>
+
+            <h2>Application of Concepts (భావనల అనువర్తనాలు)</h2>
+
+            <div class="qa-box">
+                <p class="question">1. If you are given two samples, how do you distinguish which one is metal and which is non-metal? (AS7)</p>
+                <p><strong>Answer:</strong> We can distinguish them by testing physical and chemical properties: 
+                    1. Check appearance for metallic lustre (shiny vs dull). 
+                    2. Test sonority by dropping them on a hard floor (ringing sound vs dull thud). 
+                    3. Check malleability and ductility with a hammer (flattening vs breaking into powder). 
+                    4. Test electrical and thermal conductivity. 
+                    5. Perform a chemical combustion test: metal oxides turn red litmus blue (basic), while non-metal oxides turn blue litmus red (acidic).
+                </p>
+                <div class="telugu-desc"><strong>తెలుగు వివరణ:</strong> రెండు నమూనాలను పోల్చడానికి వాటి మెరుపును చూడాలి, గట్టి నేలపై పడేసి శబ్దం గమనించాలి (మెటల్ అయితే రింగింగ్ సౌండ్ వస్తుంది), సుత్తితో కొట్టి రేకులు అవుతాయో లేక పొడి అవుతాయో చూడాలి. అలాగే ఆక్సిజన్‌తో మండించి లిట్మస్ పేపర్ పరీక్ష చేయవచ్చు.</div>
+            </div>
+
+            <div class="qa-box">
+                <p class="question">2. Which metals are used in making jewellery? Why? (AS2)</p>
+                <p><strong>Answer:</strong> Precious metals like gold, platinum, and silver are used in making jewellery. This is because they possess high lustre, are highly malleable and ductile (allowing intricate crafting), and most importantly, they are noble metals that do not corrode, tarnish, or rust when exposed to air and moisture.</p>
+                <div class="telugu-desc"><strong>తెలుగు వివరణ:</strong> ఆభరణాల తయారీకి బంగారం, వెండి, ప్లాటినం వాడతారు. ఎందుకంటే ఇవి అందంగా మెరుస్తాయి, సులభంగా రకరకాల ఆకారాలలోకి మలచవచ్చు (సాగే గుణం), మరియు గాలితో చర్య జరిపి తుప్పు పట్టవు.</div>
+            </div>
+
+            <div class="qa-box">
+                <p class="question">3. Why cooking pans don’t have metal handles? (AS7)</p>
+                <p><strong>Answer:</strong> Cooking pans do not have metal handles because metals are excellent conductors of heat. If handles were made of metal, they would quickly become extremely hot during cooking, causing severe burns to our hands. Therefore, handles are made of bad heat conductors like plastic (Bakelite) or wood.</p>
+                <div class="telugu-desc"><strong>తెలుగు వివరణ:</strong> వంట పాత్రల హ్యాండిల్స్‌కు లోహాలు వాడరు. ఎందుకంటే లోహాలు ఉష్ణాన్ని బాగా ప్రసరింపజేస్తాయి, తద్వారా హ్యాండిల్ వేడెక్కి చేతులు కాలిపోతాయి. అందుకే ఉష్ణాన్ని ప్రసరింపజేయని బెలకైట్ ప్లాస్టిక్ లేదా చెక్కతో హ్యాండిల్స్ తయారు చేస్తారు.</div>
+            </div>
+
+            <h2>Higher Order Thinking Questions (ఉన్నత స్థాయి ఆలోచనా ప్రశ్నలు)</h2>
+
+            <div class="qa-box">
+                <p class="question">1. Dumping of waste material made up of metals and non-metals leads to environment pollution. Do you support the statement? Give your justification with suitable examples.</p>
+                <p><strong>Answer:</strong> Yes, I fully support the statement. Improper dumping of heavy metal waste (like lead, mercury, and cadmium) contaminates soil and groundwater, poisoning ecosystems and entering our food chain. Non-metal and plastic chemical wastes also release toxic gases and leachates, severely disrupting environmental safety.</p>
+                <div class="telugu-desc"><strong>తెలుగు వివరణ:</strong> అవును, ఈ ప్రకటనను నేను పూర్తిగా సమర్థిస్తాను. సీసం, పాదరసం వంటి లోహ వ్యర్థాలు మరియు విషపూరిత అలోహ వ్యర్థాలను నేలలో పారవేయడం వల్ల భూగర్భ జలాలు, నేల కలుషితమై జీవావరణానికి తీవ్ర ముప్పు వాటిల్లుతుంది.</div>
+            </div>
+
+            <div class="qa-box">
+                <p class="question">2. In a chemical reaction iron is unable to displace zinc from zinc sulphate. Why? (AS1)</p>
+                <p><strong>Answer:</strong> Iron is unable to displace zinc from zinc sulphate solution because iron is less reactive than zinc in the metal reactivity series. A less reactive metal cannot displace a more reactive metal from its salt solution.</p>
+                <div class="telugu-desc"><strong>తెలుగు వివరణ:</strong> లోహాల చర్యాశీలత క్రమంలో ఇనుము కంటే జింక్ ఎక్కువ చర్యాశీలత కలిగి ఉంటుంది. తక్కువ చర్యాశీలత గల ఇనుము, ఎక్కువ చర్యాశీలత గల జింక్‌ను దాని ద్రావణం నుండి తొలగించలేదు.</div>
+            </div>
+
+            <div class="qa-box">
+                <p class="question">3. How the property malleability of metals is used in our daily life? (AS7)</p>
+                <p><strong>Answer:</strong> Malleability allows metals to be beaten into thin sheets. In daily life, this is used to make aluminium foil for packing food, silver foils for decorating sweets, corrugated iron roofing sheets, and various metal containers and utensils.</p>
+                <div class="telugu-desc"><strong>తెలుగు వివరణ:</strong> మాలియబిలిటీ (రేఖా గుణం) వల్ల లోహాలను పలచని రేకులుగా మార్చవచ్చు. ఉదాహరణకు ఆహారాన్ని ప్యాక్ చేసే అల్యూమినియం ఫాయిల్, స్వీట్లపై వెండి రేకులు మరియు ఇనుప రేకులషీట్లు దీనివల్లనే తయారవుతాయి.</div>
+            </div>
+
+            <h2 id="ch4-hots-mcq">Multiple Choice Questions (బహుళైచ్ఛిక ప్రశ్నలు)</h2>
+
+            <div class="qa-box">
+                <p class="question">1. Sulphur dioxide, by nature is</p>
+                <p>a) Basic oxide &nbsp;&nbsp;&nbsp;&nbsp; b) Acidic oxide &nbsp;&nbsp;&nbsp;&nbsp; c) Neutral oxide &nbsp;&nbsp;&nbsp;&nbsp; d) Dual nature oxide</p>
+                <p><strong>Answer: b) Acidic oxide</strong></p>
+                <div class="telugu-desc"><strong>తెలుగు వివరణ:</strong> సల్ఫర్ డై ఆక్సైడ్ అనేది అలోహ ఆక్సైడ్ కాబట్టి ఇది స్వభావరీత్యా ఆమ్ల ఆక్సైడ్ (నీలి లిట్మస్‌ను ఎరుపుగా మారుస్తుంది).</div>
+            </div>
+
+            <div class="qa-box">
+                <p class="question">2. Maximum metals are obtained in the state of</p>
+                <p>a) Liquid &nbsp;&nbsp;&nbsp;&nbsp; b) Solid &nbsp;&nbsp;&nbsp;&nbsp; c) Gaseous &nbsp;&nbsp;&nbsp;&nbsp; d) Plasma</p>
+                <p><strong>Answer: b) Solid</strong></p>
+                <div class="telugu-desc"><strong>తెలుగు వివరణ:</strong> సాధారణ ఉష్ణోగ్రత వద్ద చాలా వరకు లోహాలన్నీ ఘన స్థితిలోనే లభిస్తాయి (పాదరసం మినహా).</div>
+            </div>
+
+            <div class="qa-box">
+                <p class="question">3. Some metals react with acids and evolve</p>
+                <p>a) Hydrogen &nbsp;&nbsp;&nbsp;&nbsp; b) Oxygen &nbsp;&nbsp;&nbsp;&nbsp; c) Carbon dioxide &nbsp;&nbsp;&nbsp;&nbsp; d) Nitrogen</p>
+                <p><strong>Answer: a) Hydrogen</strong></p>
+                <div class="telugu-desc"><strong>తెలుగు వివరణ:</strong> లోహాలు ఆమ్లాలతో చర్య జరిపినప్పుడు హైడ్రోజన్ వాయువును విడుదల చేస్తాయి.</div>
+            </div>
+
+            <div class="qa-box">
+                <p class="question">4. Generally non-metallic oxides are by nature</p>
+                <p>a) Basic &nbsp;&nbsp;&nbsp;&nbsp; b) Acidic &nbsp;&nbsp;&nbsp;&nbsp; c) Neutral &nbsp;&nbsp;&nbsp;&nbsp; d) Dual</p>
+                <p><strong>Answer: b) Acidic</strong></p>
+                <div class="telugu-desc"><strong>తెలుగు వివరణ:</strong> సాధారణంగా అలోహ ఆక్సైడ్లన్నీ స్వభావరీత్యా ఆమ్ల ధర్మాన్ని కలిగి ఉంటాయి.</div>
+            </div>
+
+            <h2 id="ch4-experiments">Suggested Experiments (సూచించిన ప్రయోగాలు)</h2>
+
+            <div class="qa-box">
+                <p class="question">Experiment 1: Conduct an experiment to know the reaction of Oxygen with metals and non-metals.</p>
+                <p><strong>Aim & Procedure:</strong> Take a magnesium ribbon and burn it in air to get magnesium oxide ash; dissolve it in water and test with litmus papers. Next, burn sulphur powder in a deflagrating spoon, collect the gas in a gas jar, add water, shake well, and test with litmus papers to observe acidic vs basic nature.</p>
+                <div class="telugu-desc"><strong>తెలుగు వివరణ:</strong> మెగ్నీషియం రిబ్బన్ మరియు సల్ఫర్ పొడిని మంటపై మండించి వచ్చే బూడిద లేదా వాయువును నీటిలో కరిగించి, లిట్మస్ పేపర్లతో పరీక్షించడం ద్వారా లోహ, అలోహ ఆక్సైడ్ల స్వభావాన్ని తెలుసుకోవచ్చు.</div>
+            </div>
+
+            <div class="qa-box">
+                <p class="question">Experiment 2: The nature of oxides helps to identify the metals and non-metals. Conduct an experiment to prove this.</p>
+                <p><strong>Aim & Procedure:</strong> Burn metal samples (magnesium) and non-metal samples (sulphur) separately, dissolve their combustion products in distilled water, and test them with red and blue litmus papers. Metal oxides turn red litmus blue (basic), while non-metal oxides turn blue litmus red (acidic).</p>
+                <div class="telugu-desc"><strong>తెలుగు వివరణ:</strong> ఆక్
